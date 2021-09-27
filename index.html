@@ -4,48 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awsome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-      integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <style>
-      .row {
-        margin-top: 25vh;
-      }
-      h1 {
-        margin-top: 0;
-      }
-    </style>
+
+    <link rel="stylesheet" href="style.css" />
     <title>Secret Message</title>
   </head>
-  <body>
-    <div class="row">
-      <div class="col s8 offset-s2">
-        <div id="message-show" class="card-panel hide">
-          <h1></h1>
-          <div>
-            <a href="./index.html">Create your own secret message</a>
-          </div>
-        </div>
+  <body class="bg-white">
+    <!-- Header -->
+    <nav class="navbar bg-dark text-warning p-3">
+      <span class="navbar-text">
+        <i class="fas fa-user-secret fa-2x ml-3 mr-2"></i>
+        <h1 class="navbar-brand">My Secret Message</h1>
+      </span>
+    </nav>
 
-        <div id="message-form" class="card-panel">
-          <form action="">
-            <label for="">Enter a Secret Message</label>
-            <input type="text" id="message-input" />
-            <button class="btn">Create</button>
-          </form>
-        </div>
-
-        <div id="link-form" class="card-panel hide">
-          <div>
-            Share this link with a friend
-            <input type="text" name="" id="link-input" />
-          </div>
+    <!-- Secret Message -->
+    <div class="container">
+      <div id="message-show" class="d-none bg-dark text-light p-5">
+        <h1 id="message"></h1>
+        <div>
+          <a href="./index.html">Create your own secret message</a>
         </div>
       </div>
+
+      <!-- Form -->
+      <div id="message-form" class="bg-dark text-light">
+        <form class="p-5">
+          <div class="form-group">
+            <label for="">Enter Secret Message</label>
+            <input type="text" class="form-control p-2" id="message-input" />
+            <button class="btn btn-primary mt-3">Create</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Share Link -->
+      <div id="link-form" class="d-none bg-dark text-light p-3">
+        <form class="p-5">
+          <label class="form-group"> Share this with a friend </label>
+          <input id="link-input" class="form-control" />
+        </form>
+      </div>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>
